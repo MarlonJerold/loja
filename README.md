@@ -2,7 +2,6 @@
 ## Introduction
 This project demonstrates the implementation of a generic repository in a Java application using Spring Data JPA. The GenericRepository allows for CRUD (Create, Read, Update, Delete) operations to be performed in a generic manner for different entities, promoting code reuse and simplifying maintenance.
 ## Project Structure
-### Classes
 GenericRepository: A generic interface that extends JpaRepository, defining operations for different entities. <br>
 Person: An abstract class that represents a person, serving as the base for other entities such as Client and Admin.<br>
 Client: A subclass of Person that represents a client, with specific characteristics and behaviors.<br>

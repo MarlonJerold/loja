@@ -1,17 +1,22 @@
 package com.loja.loja.product;
 
+import com.loja.loja.repository.GenericRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.UUID;
 
 @Service
 public class ProductService {
 
-    private final ProductRepository productRepository;
+    private final GenericRepository<Product, UUID> productGenericRepository;
 
-    public ProductService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    @Autowired
+    public ProductService(GenericRepository<Product, UUID> productGenericRepository) {
+        this.productGenericRepository = productGenericRepository;
     }
 
     public void createProduct(Product product) {
-        productRepository.save(product);
+        productGenericRepository.save(product);
     }
 }

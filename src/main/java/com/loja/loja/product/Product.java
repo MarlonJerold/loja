@@ -1,5 +1,6 @@
 package com.loja.loja.product;
 
+import com.loja.loja.repository.GenericEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,10 +10,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity(name = "product")
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+public class Product extends GenericEntity {
 
     private String name;
     private String description;
@@ -25,14 +23,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 
     public String getName() {

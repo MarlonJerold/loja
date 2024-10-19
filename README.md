@@ -10,7 +10,6 @@ Admin: A subclass of Person that represents an administrator, also with specific
 ClientService: A service class that uses the GenericRepository to perform operations related to Client.<br>
 AdminService: A service class that uses the GenericRepository to perform operations related to Admin.<br>
 ProductService: A service class that uses a generic repository to manage products.<br>
-###  Interface<br>
 GenericRepository: The GenericRepository is parameterized to allow any entity that extends GenericEntity to be manipulated. The interface provides basic methods for persisting, updating, deleting, and retrieving entities from the database.<br>
 Entity Structure<br>
 Abstract Class Person<br>
